@@ -1,0 +1,30 @@
+import java.util.Scanner ;
+
+public class Main {
+    public static void main(String[] args) {
+        //Değişkenlerimizi oluşturalım.
+  double a , b , c , alan , hipotenüs , cevre ;
+  Scanner input = new Scanner(System.in);
+
+        System.out.println("a kenar uzunluğunu giriniz : ");
+        a = input.nextDouble();
+        System.out.println("b kenar uzunluğunu giriniz : ");
+        b = input.nextDouble();
+
+        c = Math.sqrt((a * a) + (b * b));
+
+
+        //Alan hesabı
+        alan = a * b / 2 ;
+        System.out.println("Alan = " + alan);
+
+        System.out.println("Hipotenüs : " + c);
+
+        cevre = a + b + c ;
+        System.out.println("Cevre = " + cevre);
+
+
+
+
+    }
+}
