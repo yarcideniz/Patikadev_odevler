@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int r;
+        double pi = 3.14 , a , daireAlan , daireCevre , alanDilim ;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Lütfen yarıçapı giriniz : " );
+        r = sc.nextInt();
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lütfen merkez açı ölçüsü giriniz : ");
+        a = input.nextDouble();
+
+
+        //Dairenin alanını ve çevresini hesaplayan formül
+
+        daireAlan = ( pi * r * r ) ;
+        daireCevre = ( 2 * pi * r ) ;
+        alanDilim = ( daireAlan * a ) / 360 ;
+        System.out.println("Dairenin Alanı : " + alanDilim);
+        System.out.println("Dairenin Çevresi : " + daireCevre);
+        System.out.println("Dilimin Alanı : " + alanDilim);
+
+    }
+}
