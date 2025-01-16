@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+       double armut = 2.14 , elma = 3.67 , domates = 1.11 , muz = 0.95 , patlıcan = 5.00 ;
+       double kgArmut , kgElma , kgDomates , kgMuz , kgPatlıcan , toplam ;
+       Scanner in = new Scanner(System.in);
+        System.out.println("Armut kilogramı giriniz : ");
+        kgArmut = in.nextDouble();
+        System.out.println("Elma kilogramı giriniz : ");
+        kgElma = in.nextDouble();
+        System.out.println("Domates kilogramı giriniz : ");
+        kgDomates = in.nextDouble();
+        System.out.println("Muz kilogramı giriniz : ");
+        kgMuz = in.nextDouble();
+        System.out.println("Patlıcan kilogramı giriniz : ");
+        kgPatlıcan = in.nextDouble();
+
+        //Toplam Tutar hesaplama
+        toplam = (armut * kgArmut) + (elma * kgElma) + (domates * kgDomates) + (muz * kgMuz) + (patlıcan * kgPatlıcan);
+        System.out.println("Toplam Meyve Tutarı : " + toplam);
+
+    }
+}
