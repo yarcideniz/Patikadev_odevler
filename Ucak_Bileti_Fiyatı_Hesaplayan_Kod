@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int yas,yolculukTipi ;
+        double km , biletFiyat , indirimTutari , toplamFiyat ;
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Lütfen yolculuk tipinizi seçiniz.. (1 veya 2)");
+        yolculukTipi = in.nextInt();
+
+        //Mesafe girişi kontrolü
+        System.out.println("Lütfen gideceğiniz mesafeyi giriniz: ");
+        km = in.nextDouble();
+        if(km <= 0 || (km % 1 != 0)) {
+            System.out.println("Hatalı girdi! Mesafe bilgisi pozitif tamsayı olmalıdır.");
+            return; //Programdan çık
+        }
+
+        //Yaş girişi kontrolü
+        System.out.println("Lütfen yaşınızı giriniz: ");
+        yas = in.nextInt();
+        if(yas <= 0) {
+            System.out.println("Lütfen yaşınızı pozitif tamsayı şeklinde giriniz.");
+            return; //Programdan çık
+        }
+
+        //Bilet fiyatı hesaplama
+        biletFiyat = km * 0.10 ;
+
+        if(yolculukTipi == 1) {
+        }if(yas < 12){
+            indirimTutari = (biletFiyat * 0.50) ;
+            toplamFiyat = biletFiyat - indirimTutari ;
+            System.out.println("Bilet Fiyat: " + toplamFiyat);
+
+        }else if(yas >= 12 && yas <=24){
+            indirimTutari = (biletFiyat * 0.10) ;
+            toplamFiyat = biletFiyat - indirimTutari ;
+            System.out.println("Bilet Fiyat: " + toplamFiyat);
+        }else if(yas < 65 && yas > 24) {
+            indirimTutari = (biletFiyat * 0.30) ;
+            toplamFiyat = biletFiyat - indirimTutari ;
+            System.out.println("Bilet Fiyat: " + toplamFiyat);
+        }else if(yolculukTipi == 2) {
+        }else if(yas < 12){
+            indirimTutari = (biletFiyat * 0.50) ;
+            toplamFiyat = (biletFiyat - indirimTutari) * 0.20 ;
+            System.out.println("Bilet Fiyat: " + toplamFiyat);
+            }else if(yas >= 12 && yas <=24){
+            indirimTutari = (biletFiyat * 0.10) ;
+            toplamFiyat = (biletFiyat - indirimTutari) * 0.20 ;
+            System.out.println("Bilet Fiyat: " + toplamFiyat);
+        }else if(yas < 65 && yas > 24) {
+            indirimTutari = (biletFiyat * 0.30) ;
+            toplamFiyat = (biletFiyat - indirimTutari) * 0.20;
+            System.out.println("Bilet Fiyat: " + toplamFiyat);
+        }
+    }
+}
